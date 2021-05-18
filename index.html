@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="js/paint.js"></script>
+    <title>Paint</title>
+</head>
+
+<body class="container-fluid ml-0 mr-0">
+    <!-- <nav class="navbar navbar-expand-sm navbar-light bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" id="lapiz" href="#">Lapiz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" id="goma" href="#">Goma</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" id="limpiar" href="#">Limpiar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" id="guardar" href="#">Guardar</a>
+                </li>
+            </ul>
+        </div>
+    </nav> -->
+    <ul class="nav nav-tabs bg-dark header" id="navId">
+        <li class="nav-item text-light py-3 ml-3 navbar-brand icono">
+            <img src="./images/icono-wh.png" class="icono-img" alt="icono">
+            Paint - Filtros
+        </li>
+        <li class="nav-item text-light py-3 navbar-brand">
+            Joel Dicharry - Interfaces de Usuarios e Interacción - TUDAI
+        </li>
+    </ul>
+    <section>
+        <nav class="navbar navbar-expand-sm navbar-light bg-secondary rounded my-2 buttons">
+            <div class="container align-self-center">
+                <div class="" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item mt-2 mr-1">
+                            <div class="file-select">
+                                <input type="file" id="upload" class="text-white">
+                            </div>
+                        </li>
+                        <li class="nav-item settings">
+                            <div class=" row my-1 mx-2 text-white">
+                                <div >
+                                    <label for="colorSelect">Color:</label>
+                                    <input type="color" name="colorSelect" id="colorSelect" class="ml-1">
+                                </div>
+                                <label for="grosor" class="ml-3">Tamaño:</label>
+                                <input type="range" name="grosor" id="grosor" value="1" min="1" max="50" accept="image/*" class="mb-3 ml-1">
+                                <p id="valueRange" class="ml-2">1</p>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" id="lapiz" href="#">Lapiz</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" id="goma" href="#">Goma</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" id="limpiar" href="#">Limpiar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" id="guardar" href="#">Guardar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="row canvas-container">
+            <canvas id="canvas" class="ml-2">
+                Canvas no es soportado por este navegador
+            </canvas>
+            <div class="col-2">
+                <button id="byn" name="byn" class="btn btn-info btn-block mt-3">Blanco y Negro</button>
+                <button id="negativo"  name="negativo" class="btn btn-info btn-block mt-3">Negativo</button>
+                <button id="brilloMas"  name="brilloMas" class="btn btn-info btn-block mt-3">Brillo +</button>
+                <button id="brilloMenos"  name="brilloMenos" class="btn btn-info btn-block mt-3">Brillo -</button>
+                <button id="binarizacion" name="binarizacion" class="btn btn-info btn-block mt-3">Binarización</button>
+                <button id="sepia" name="sepia" class="btn btn-info btn-block mt-3">Sepia</button>
+                <button id="saturacion" name="saturacion" class="btn btn-primary btn-block mt-3">Saturación</button>
+                <button id="suavizado" name="suavizado" class="btn btn-primary btn-block mt-3 disabled">Suavizado</button>
+                <button id="restaurar" class="btn btn-success btn-block mt-3">Restaurar</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

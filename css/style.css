@@ -1,0 +1,69 @@
+body {
+    padding: 0 !important;
+    background-color: #202326ba !important;
+    overflow-x:hidden;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+img {
+    width: 27px;
+}
+.buttons {
+    height: 40px;
+    box-shadow: 0 0 15px rgb(55, 54, 54);
+    max-width: 1000px;
+    margin: 0;
+    left: 175px;
+}
+.buttons > div.container {
+    margin-top: 4px;
+}
+.settings {
+    position: relative;
+    top: 6px;
+}
+
+a:hover {
+    color: "black" !important;
+}
+
+canvas {
+    border: 1px solid black;
+    box-shadow: 0 0 18px 6px rgb(0, 0, 0);
+}
+
+
+.canvas-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+/***********/
+.file-select {			
+    position: relative;
+    display: inline-block;
+}
+.file-select::before {
+    background-color: #5678EF;
+    color: white;
+    display: flex;			
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    content: 'Cargar Imagen';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 5px;
+}
+.file-select input[type="file"] {
+    opacity: 0;
+    width: 200px;
+    height: 32px;
+    display: inline-block;
+}
+/***********/
